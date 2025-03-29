@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết User</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+        }
+        .header, .footer {
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            background: #fff;
+            border: 1px solid #ccc;
+            margin-bottom: 200px;
+            margin-top: 200px;
+        }
+        .container {
+            width: 400px;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border-radius: 8px;
+        }
+        .container h2 {
+            margin-bottom: 20px;
+        }
+        .info {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .info p {
+            margin: 8px 0;
+        }
+        .info strong {
+            display: inline-block;
+            width: 100px;
+        }
+        .edit-btn {
+            padding: 8px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .edit-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <a href="#">Home</a> | <a href="#">Đăng xuất</a>
+    </div>
+
+    <div class="container">
+        <h2>Màn hình chi tiết</h2>
+        <div class="info">
+            <p><strong>Username:</strong> test1</p>
+            <p><strong>Email:</strong> test1@gmail.com</p>
+        </div>
+        <button class="edit-btn">Chỉnh sửa</button>
+    </div>
+
+    <div class="footer">
+        Lập trình web ©01/2024
+    </div>
+
+</body>
+</html>

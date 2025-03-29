@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .container {
+            border: 3px solid #000;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        .container a:hover {
+            color: antiquewhite;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container-fluid {
+            border: 1px solid #000;
+            width: 500px;
+            height: 300px;
+        }
+
+        .container-fluid input{
+            margin: 10px;
+            border: 3px solid #000;
+        }
+
+        .content {
+            flex: 1;
+            text-align: center;
+            justify-content: center;
+            display: flex;
+            margin-top: 50px;
+        }
+
+        footer {
+            text-align: center;
+            border: 3px solid #000;
+        }
+
+        button {
+            color: white;
+            background: #0400f4;
+            border: 0px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="container">
+                <a href="index.html">Home</a>
+                <a href="login.html">Đăng nhập</a>
+                <a href="register.html">Đăng ký</a>
+            </div>
+        </header>
+
+        <div class="content">
+            <div class="container-fluid">
+                <h1>Màn hình đăng nhập</h1>
+                Username<input type="text" id="username" placeholder="Username"><br>
+                Password <input type="password" id="password" placeholder="Password"><br>
+                Re-enter password<input type="password" placeholder="Re-enter the password"><br>
+                Email<input type="email" placeholder="Email"><br>
+                <button>Đăng nhập</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>Lập trình web @01/2024</p>
+        </footer>
+    </div>
+</body>
+
+</html>
