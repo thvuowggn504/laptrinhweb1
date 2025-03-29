@@ -1,6 +1,6 @@
-[submodule "EXE/EXE1"]
-	path = EXE/EXE1
-	url = ../laptrinhweb1.git
 [submodule "EXE/EXE2"]
 	path = EXE/EXE2
 	url = ../laptrinhweb1.git
+[submodule "EXE/EXE1"]
+	path = EXE/EXE1
+	url = https://github.com/thvuowggn504/laptrinhweb1.git
