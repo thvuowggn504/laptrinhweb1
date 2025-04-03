@@ -1,35 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
 
-@extends('dashboard')
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="list.css">
+    <title>Document</title>
+</head>
 
-@section('content')
-    <main class="login-form">
-        <div class="container">
-            <div class="row justify-content-center">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach($users as $user)
-                            <tr>
-                                <th>{{ $user->id }}</th>
-                                <th>{{ $user->name }}</th>
-                                <th>{{ $user->email }}</th>
-                                <th>
-                                    <a href="{{ route('user.readUser', ['id' => $user->id]) }}">View</a> |
-                                    <a href="{{ route('user.updateUser', ['id' => $user->id]) }}">Edit</a> |
-                                    <a href="{{ route('user.deleteUser', ['id' => $user->id]) }}">Delete</a>
-                                </th>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-            </div>
+<body>
+    @extends('dashboard')
+    
+    @section('content')
+        <div class="header">
+            <a href="{{ url('/') }}">Home</a> | <a href="{{ url('/login') }}">Đăng xuất</a>
         </div>
-    </main>
-@endsection
+
+        <div class="container-list">
+            <h2>Danh sách user</h2>
+            <table>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Sở Thích</th>
+                    <th>Facebook</th>
+                    <th>Email</th>
+                    <th>Thao tác</th>
+                </tr>
+                @foreach($users as $user)
+                    <tr>
+                        <td>{{ $user->id }}</td>
+                        <td>{{ $user->name }}</td>
+                        <td>{{ $user->sothich }}</td>
+                        <td>{{ $user->facebook }}</td>
+                        <td>{{ $user->email }}</td>
+                        <td class="actions">
+                            <a href="{{ route('user.readUser', ['id' => $user->id]) }}">View</a> |
+                            <a href="{{ route('user.updateUser', ['id' => $user->id]) }}">Edit</a> |
+                            <a href="{{ route('user.deleteUser', ['id' => $user->id]) }}">Delete</a>
+                        </td>
+                    </tr>
+                @endforeach
+            </table>
+        </div>
+
+        <div class="footer">
+            Lập trình web ©01/2024
+        </div>
+    @endsection
+
+</body>
+
+</html>
